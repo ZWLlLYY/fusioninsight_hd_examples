@@ -21,7 +21,6 @@ public class NewProducer extends Thread
 {
     private static final Logger LOG = LoggerFactory.getLogger(NewProducer.class);
 
-    private final KafkaProducer<Integer, String> producer;
 
     private final String topic;
 
@@ -37,6 +36,8 @@ public class NewProducer extends Thread
 
     // Key序列化类
     private final String keySerializer = "key.serializer";
+
+    private final KafkaProducer<Integer, String> producer;
 
     // Value序列化类
     private final String valueSerializer = "value.serializer";
